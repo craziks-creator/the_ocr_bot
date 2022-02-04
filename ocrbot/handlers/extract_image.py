@@ -18,7 +18,7 @@ def extract_image(update:Update,context:CallbackContext):
                 [InlineKeyboardButton("Arabic", callback_data='ara'),InlineKeyboardButton("Afrikans", callback_data='AFR'), InlineKeyboardButton("German", callback_data='gre')],
                 [InlineKeyboardButton("Italian", callback_data='ita'),InlineKeyboardButton("Indonesian", callback_data='eng'),InlineKeyboardButton("French", callback_data='fre')],
                 [InlineKeyboardButton ("Spanish", callback_data='spa'),InlineKeyboardButton("Portuguese", callback_data='por'),InlineKeyboardButton("Korean", callback_data='kor')]]
-    reply_markup = 'keyboard'
+    reply_markup = InlineKeyboardMarkup'keyboard'
 
     m = update.message.reply_text('Select Language : ', reply_markup=reply_markup,quote=True)
     insert_file_path(chat_id,m.message_id,file_path)
